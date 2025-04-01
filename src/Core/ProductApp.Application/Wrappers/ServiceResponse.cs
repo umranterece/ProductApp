@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProductApp.Application.Wrappers
 {
-    public class ServiceResponse<T>
+    public class ServiceResponse<T>:BaseResponse
     {
         public T Value { get; set; }
 
@@ -14,9 +14,6 @@ namespace ProductApp.Application.Wrappers
         {
             Value = value;
         }
-        public ServiceResponse()
-        {
-            
-        }
+       
     }
 }

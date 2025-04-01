@@ -1,4 +1,5 @@
 
+using ProductApp.Application;
 using ProductApp.Domain.Entities;
 using ProductApp.Persistence;
 using ProductApp.Persistence.Context;
@@ -6,8 +7,10 @@ using ProductApp.Persistence.Context;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddApplicationRegistration();
 builder.Services.AddPersistenceServices();
+
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

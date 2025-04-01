@@ -12,8 +12,7 @@ namespace ProductApp.Persistence.Context
     {
         public DbSet<Product> Products { get; set; }
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-           : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
 
